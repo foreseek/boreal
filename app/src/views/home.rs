@@ -1,5 +1,8 @@
 use yew::prelude::*;
 
+use crate::components::boreal_box::BorealBox;
+use crate::components::boreal_status::*;
+
 pub struct Home {}
 impl Component for Home {
     type Message = ();
@@ -16,14 +19,14 @@ impl Component for Home {
     fn view(&self, _ctx: &Context<Self>) -> Html {
         html! {
           <div class={ classes!("position-center-vh", "scale-screen-h") }>
-            <div class={ "boreal-box" }>
+            <BorealBox>
               <div class={ classes!("flex-space-between", "vertical-center", "pb-10") }>
                 <h2>{ "Welcome to boreal" }</h2>
-                <div class={ "status-ok" }>{""}</div>
+                <BorealStatus/>
               </div>
               <p>{ "Your Boreal installation is currently up and running!" }</p>
               <p>{ "You can access your admin pannel via /admin" }</p>
-            </div>
+            </BorealBox>
           </div>
         }
     }

@@ -3,6 +3,7 @@
 $box-background: #f7f7f7;
 $p-color: #7e7e7e;
 $green: rgb(100, 170, 100);
+$red: rgb(170, 100, 100);
 
 * {
   margin: 0;
@@ -29,10 +30,17 @@ p {
   padding-bottom: 10px;
 }
 
-.status-ok {
+.bg-color-green {
+  background-color: $green;
+}
+
+.bg-color-red {
+  background-color: $red;
+}
+
+.boreal-status {
   width: 10px;
   height: 10px;
-  background-color: $green;
   border-radius: 50%;
 }
 
